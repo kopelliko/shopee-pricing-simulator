@@ -590,12 +590,14 @@ body {
   align-items: baseline;
   gap: 6px;
   margin-bottom: 4px;
+  flex-wrap: wrap;
 }
 
 .rate-card-prefix {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   color: var(--text-dim);
+  flex-shrink: 0;
 }
 
 .rate-card-input {
@@ -611,6 +613,11 @@ body {
   width: 100%;
   min-width: 0;
 }
+  
+.rate-card-input::-webkit-outer-spin-button,
+.rate-card-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 
 .rate-card-input:focus {
   outline: none;
@@ -622,6 +629,7 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   color: var(--text-dim);
+  flex-shrink: 0;
 }
 
 .rate-card-date {
